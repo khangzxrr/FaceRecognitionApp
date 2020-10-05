@@ -14,10 +14,11 @@ namespace FaceRecognitionApp
 {
     public partial class Form1 : Form
     {
+        Controller controller;
         public Form1()
         {
             InitializeComponent();
-            
+            controller = new Controller();
         }
         private void nhapdanhsachBtn_Click(object sender, EventArgs e)
         {
