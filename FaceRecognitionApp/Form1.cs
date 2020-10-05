@@ -20,9 +20,22 @@ namespace FaceRecognitionApp
             InitializeComponent();
             controller = new Controller();
         }
+
         private void nhapdanhsachBtn_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "excel file (*.xlsx)|*.xlsx";
+                openFileDialog.RestoreDirectory = true;
 
+                if(openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var filePath = openFileDialog.FileName;
+                    controller.ReadDataFromFile(filePath);
+                }
+            }
         }
+
+
     }
 }

@@ -8,14 +8,14 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace FaceRecognitionApp.DAO
 {
-    class sinhvienDAO
+    class SinhVienDAO
     {
-        public static sinhvienDTO CreateNewSinhvien(string mssv, string hovatendem, string ten, bool trained)
+        public SinhVienDTO CreateNewSinhvien(string mssv, string hovatendem, string ten, bool trained)
         {
-            return new sinhvienDTO(mssv, hovatendem, ten, trained);
+            return new SinhVienDTO(mssv, hovatendem, ten, trained);
         }
 
-        public static List<sinhvienDTO> readAllSinhVienFromFile(string excelPath)
+        public List<SinhVienDTO> readAllSinhVienFromFile(string excelPath)
         {
             var excelApp = new Excel.Application();
             var excelWorkBook = excelApp.Workbooks.Open(excelPath);
@@ -25,16 +25,20 @@ namespace FaceRecognitionApp.DAO
             var rw = range.Rows.Count;
             var cl = range.Columns.Count;
 
-            for(int i = 1; i <= rw; i++)
+            List<SinhVienDTO> sinhviens = new List<SinhVienDTO>();
+            for(int i = 2; i <= rw; i++)
             {
-                for(int j = 1; j <= cl; j++)
-                {
-                    var str = (string)(range.Cells[i, j] as Excel.Range).Value2;
-                    Console.WriteLine(str);
-                }
+                var mssv = (string)(range.Cells[i, 1] as Excel.Range).Value2;
+                var hovatendem = (string)(range.Cells[i, 2] as Excel.Range).Value2;
+                var ten = (string)(range.Cells[i, 3] as Excel.Range).Value2;
+
+                sinhviens.Add(CreateNewSinhvien(mssv, hovatendem, ten, false));
             }
 
-            return null;
+            excelWorkBook.Close();
+            excelApp.Quit();
+
+            return sinhviens;
         }
     }
 }

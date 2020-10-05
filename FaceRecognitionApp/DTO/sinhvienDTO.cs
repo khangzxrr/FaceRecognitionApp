@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace FaceRecognitionApp.DTO
 {
-    class sinhvienDTO
+    class SinhVienDTO
     {
         string mssv { get; set; }
         string hovatendem { get; set; }
         string ten { get; set; }
         bool trained = false;
 
-        public sinhvienDTO(string mssv, string hovatendem, string ten, bool trained)
+        public SinhVienDTO(string mssv, string hovatendem, string ten, bool trained)
         {
             this.mssv = mssv;
             this.hovatendem = hovatendem;

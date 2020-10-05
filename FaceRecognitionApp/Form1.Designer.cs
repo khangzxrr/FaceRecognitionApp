@@ -36,13 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.monthiField = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tongsophongField = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.nhapdanhsachBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
             this.sangRadio = new System.Windows.Forms.RadioButton();
             this.chieuRadio = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.tongsophongField)).BeginInit();
             this.SuspendLayout();
             // 
             // kythiField
@@ -120,28 +117,10 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Buổi Thi";
             // 
-            // tongsophongField
-            // 
-            this.tongsophongField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tongsophongField.Location = new System.Drawing.Point(236, 300);
-            this.tongsophongField.Name = "tongsophongField";
-            this.tongsophongField.Size = new System.Drawing.Size(154, 34);
-            this.tongsophongField.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 29);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Tổng số phòng thi";
-            // 
             // nhapdanhsachBtn
             // 
             this.nhapdanhsachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhapdanhsachBtn.Location = new System.Drawing.Point(221, 354);
+            this.nhapdanhsachBtn.Location = new System.Drawing.Point(221, 309);
             this.nhapdanhsachBtn.Name = "nhapdanhsachBtn";
             this.nhapdanhsachBtn.Size = new System.Drawing.Size(411, 43);
             this.nhapdanhsachBtn.TabIndex = 13;
@@ -152,7 +131,7 @@
             // nextBtn
             // 
             this.nextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(500, 403);
+            this.nextBtn.Location = new System.Drawing.Point(500, 381);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(132, 36);
             this.nextBtn.TabIndex = 14;
@@ -192,8 +171,6 @@
             this.Controls.Add(this.sangRadio);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.nhapdanhsachBtn);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.tongsophongField);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.monthiField);
@@ -204,7 +181,6 @@
             this.Controls.Add(this.kythiField);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.tongsophongField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,8 +196,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox monthiField;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown tongsophongField;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button nhapdanhsachBtn;
         private System.Windows.Forms.Button nextBtn;
         private System.Windows.Forms.RadioButton sangRadio;
