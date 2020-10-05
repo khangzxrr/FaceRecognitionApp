@@ -80,6 +80,12 @@
     <Compile Include="Controller.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
+    <Compile Include="RoomPickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomPickerForm.Designer.cs">
+      <DependentUpon>RoomPickerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
