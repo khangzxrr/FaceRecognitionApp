@@ -40,6 +40,8 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.sangRadio = new System.Windows.Forms.RadioButton();
             this.chieuRadio = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sophongField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // kythiField
@@ -111,7 +113,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(114, 257);
+            this.label5.Location = new System.Drawing.Point(114, 303);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 29);
             this.label5.TabIndex = 9;
@@ -120,7 +122,7 @@
             // nhapdanhsachBtn
             // 
             this.nhapdanhsachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhapdanhsachBtn.Location = new System.Drawing.Point(221, 309);
+            this.nhapdanhsachBtn.Location = new System.Drawing.Point(224, 352);
             this.nhapdanhsachBtn.Name = "nhapdanhsachBtn";
             this.nhapdanhsachBtn.Size = new System.Drawing.Size(411, 43);
             this.nhapdanhsachBtn.TabIndex = 13;
@@ -131,7 +133,7 @@
             // nextBtn
             // 
             this.nextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(500, 381);
+            this.nextBtn.Location = new System.Drawing.Point(503, 415);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(132, 36);
             this.nextBtn.TabIndex = 14;
@@ -142,7 +144,7 @@
             // 
             this.sangRadio.AutoSize = true;
             this.sangRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sangRadio.Location = new System.Drawing.Point(236, 255);
+            this.sangRadio.Location = new System.Drawing.Point(239, 299);
             this.sangRadio.Name = "sangRadio";
             this.sangRadio.Size = new System.Drawing.Size(90, 33);
             this.sangRadio.TabIndex = 15;
@@ -154,7 +156,7 @@
             // 
             this.chieuRadio.AutoSize = true;
             this.chieuRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chieuRadio.Location = new System.Drawing.Point(332, 253);
+            this.chieuRadio.Location = new System.Drawing.Point(335, 299);
             this.chieuRadio.Name = "chieuRadio";
             this.chieuRadio.Size = new System.Drawing.Size(97, 33);
             this.chieuRadio.TabIndex = 16;
@@ -162,11 +164,31 @@
             this.chieuRadio.Text = "Chiều";
             this.chieuRadio.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(98, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 29);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Số phòng";
+            // 
+            // sophongField
+            // 
+            this.sophongField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sophongField.Location = new System.Drawing.Point(221, 255);
+            this.sophongField.Name = "sophongField";
+            this.sophongField.Size = new System.Drawing.Size(411, 34);
+            this.sophongField.TabIndex = 17;
+            // 
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 450);
+            this.ClientSize = new System.Drawing.Size(743, 482);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.sophongField);
             this.Controls.Add(this.chieuRadio);
             this.Controls.Add(this.sangRadio);
             this.Controls.Add(this.nextBtn);
@@ -179,7 +201,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kythiField);
-            this.Name = "Form1";
+            this.Name = "StartForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,6 +222,8 @@
         private System.Windows.Forms.Button nextBtn;
         private System.Windows.Forms.RadioButton sangRadio;
         private System.Windows.Forms.RadioButton chieuRadio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox sophongField;
     }
 }
 
