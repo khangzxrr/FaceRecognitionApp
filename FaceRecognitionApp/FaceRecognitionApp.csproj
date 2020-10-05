@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Controller.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="DTO\KyThiDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
     <Compile Include="RoomPickerForm.cs">
       <SubType>Form</SubType>

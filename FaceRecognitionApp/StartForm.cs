@@ -1,4 +1,5 @@
-﻿using FaceRecognitionDotNet;
+﻿using FaceRecognitionApp.DTO;
+using FaceRecognitionDotNet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,12 @@ namespace FaceRecognitionApp
             }
         }
 
-
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            bool sang = sangRadio.Checked ? true : false;
+            var kythiDTO = new KyThiDTO(kythiField.Text, khoangayField.Value, monthiField.Text, sang, int.Parse(sophongField.Text));
+            RoomPickerForm roomPickerForm = new RoomPickerForm(kythiDTO);
+            roomPickerForm.Show();
+        }
     }
 }
