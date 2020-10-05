@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace FaceRecognitionApp
 {
-    public partial class Form1 : Form
+    public partial class StartForm : Form
     {
         Controller controller;
-        public Form1()
+        public StartForm()
         {
             InitializeComponent();
             controller = new Controller();
