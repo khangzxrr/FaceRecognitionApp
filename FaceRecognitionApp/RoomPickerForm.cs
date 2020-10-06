@@ -32,7 +32,10 @@ namespace FaceRecognitionApp
             int padding = 15;
 
             int elementOnRowCount = 1;
-            for(int i = 2; i <= phongThiList.Count; i++)
+
+            phong1Btn.Text = $"Phòng {phongThiList[0].phong}";
+
+            for (int i = 2; i <= phongThiList.Count; i++)
             {
                 
 
@@ -63,6 +66,8 @@ namespace FaceRecognitionApp
         private void OnRoomBtnClicked(object sender, MouseEventArgs e)
         {
             Console.WriteLine(((Button)sender).Text);
+
+
         }
 
         private void SetData(KyThiDTO kythi)

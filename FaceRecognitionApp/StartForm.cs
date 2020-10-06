@@ -1,5 +1,4 @@
 ﻿using FaceRecognitionApp.DTO;
-using FaceRecognitionDotNet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

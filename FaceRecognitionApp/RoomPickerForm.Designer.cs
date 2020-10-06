@@ -55,7 +55,7 @@
             this.phong1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phong1Btn.Location = new System.Drawing.Point(37, 235);
             this.phong1Btn.Name = "phong1Btn";
-            this.phong1Btn.Size = new System.Drawing.Size(139, 38);
+            this.phong1Btn.Size = new System.Drawing.Size(202, 38);
             this.phong1Btn.TabIndex = 4;
             this.phong1Btn.Text = "Phòng 1";
             this.phong1Btn.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             this.khoangayLabel.AutoSize = true;
             this.khoangayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.khoangayLabel.Location = new System.Drawing.Point(394, 80);
+            this.khoangayLabel.Location = new System.Drawing.Point(406, 133);
             this.khoangayLabel.Name = "khoangayLabel";
             this.khoangayLabel.Size = new System.Drawing.Size(137, 29);
             this.khoangayLabel.TabIndex = 6;
@@ -94,7 +94,7 @@
             // 
             this.buoiThiLabel.AutoSize = true;
             this.buoiThiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buoiThiLabel.Location = new System.Drawing.Point(394, 128);
+            this.buoiThiLabel.Location = new System.Drawing.Point(406, 181);
             this.buoiThiLabel.Name = "buoiThiLabel";
             this.buoiThiLabel.Size = new System.Drawing.Size(109, 29);
             this.buoiThiLabel.TabIndex = 8;
