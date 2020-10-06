@@ -1,4 +1,5 @@
 ﻿using FaceRecognitionApp.DAO;
+using FaceRecognitionApp.DTO;
 using FaceRecognitionApp.MODEL;
 using System;
 using System.Collections.Generic;
@@ -11,22 +12,28 @@ namespace FaceRecognitionApp
 {
     class Controller
     {
-        SinhVienModel sinhvienModel;
-        SinhVienDAO sinhvienDAO;
+        KyThiDAO kyThiDAO = new KyThiDAO();
+
+        public KyThiDTO kyThiDTO;
         public Controller()
         {
-            sinhvienDAO = new SinhVienDAO();
-            sinhvienModel = new SinhVienModel();
+            
 
+        }
+
+
+        public void CreateNewKyThi(string ten, DateTime ngay, bool buoi, int sophong)
+        {
+            kyThiDTO = new KyThiDTO(ten, ngay, buoi, sophong);
         }
 
         public void ReadDataFromFile(string excelPath)
         {
             try
             {
-                sinhvienModel.sinhviens = sinhvienDAO.readAllSinhVienFromFile(excelPath);
-                MessageBox.Show($"Loaded {sinhvienModel.sinhviens.Count} sinh vien!");
-            }catch(Exception e)
+                kyThiDAO.readMonThiAndSinhviens(excelPath);
+            }
+            catch(Exception e)
             {
                 MessageBox.Show(e.Message + "\n" + e.StackTrace);
             }

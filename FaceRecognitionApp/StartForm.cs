@@ -40,8 +40,10 @@ namespace FaceRecognitionApp
         private void nextBtn_Click(object sender, EventArgs e)
         {
             bool sang = sangRadio.Checked ? true : false;
-            var kythiDTO = new KyThiDTO(kythiField.Text, khoangayField.Value, monthiField.Text, sang, int.Parse(sophongField.Text));
-            RoomPickerForm roomPickerForm = new RoomPickerForm(kythiDTO);
+
+            controller.CreateNewKyThi(kythiField.Text, khoangayField.Value, sang, int.Parse(sophongField.Text));
+
+            RoomPickerForm roomPickerForm = new RoomPickerForm(controller.kyThiDTO);
             roomPickerForm.Show();
         }
     }

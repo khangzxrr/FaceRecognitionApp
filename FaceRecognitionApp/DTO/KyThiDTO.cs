@@ -14,7 +14,13 @@ namespace FaceRecognitionApp.DTO
         public bool buoi { get; set; }
         public int tongsophong { get; set; }
 
-
+        /// <summary>
+        /// create new ky thi which monThis will be set later, buoi thi [true is Sang, false is toi]
+        /// </summary>
+        /// <param name="ten"></param>
+        /// <param name="khoaNgay"></param>
+        /// <param name="buoi"></param> 
+        /// <param name="tongsophong"></param>
         public KyThiDTO(string ten, DateTime khoaNgay, bool buoi, int tongsophong)
         {
             this.ten = ten;

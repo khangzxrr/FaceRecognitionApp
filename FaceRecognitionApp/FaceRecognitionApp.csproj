@@ -78,11 +78,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
+    <Compile Include="DAO\KyThiDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DTO\KyThiDTO.cs" />
     <Compile Include="DTO\MonThiDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
-    <Compile Include="MODEL\KyThiModel.cs" />
     <Compile Include="RoomPickerForm.cs">
       <SubType>Form</SubType>
     </Compile>
