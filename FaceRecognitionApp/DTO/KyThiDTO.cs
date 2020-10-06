@@ -10,15 +10,15 @@ namespace FaceRecognitionApp.DTO
     {
         public string ten { get; set; }
         public DateTime khoaNgay { get; set; }
-        public string mon { get; set; }
+        public List<MonThiDTO> monThis { get; set; }
         public bool buoi { get; set; }
         public int tongsophong { get; set; }
 
-        public KyThiDTO(string ten, DateTime khoaNgay, string mon, bool buoi, int tongsophong)
+
+        public KyThiDTO(string ten, DateTime khoaNgay, bool buoi, int tongsophong)
         {
             this.ten = ten;
             this.khoaNgay = khoaNgay;
-            this.mon = mon;
             this.buoi = buoi;
             this.tongsophong = tongsophong;
         }

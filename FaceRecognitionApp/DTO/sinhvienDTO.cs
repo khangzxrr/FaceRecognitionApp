@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FaceRecognitionApp.DTO
 {
-    class SinhVienDTO
+    public class SinhVienDTO
     {
         string mssv { get; set; }
         string hovatendem { get; set; }
