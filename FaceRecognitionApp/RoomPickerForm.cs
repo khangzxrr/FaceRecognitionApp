@@ -65,8 +65,25 @@ namespace FaceRecognitionApp
 
         private void OnRoomBtnClicked(object sender, MouseEventArgs e)
         {
-            Console.WriteLine(((Button)sender).Text);
+            var textContainPhongThiName = ((Button)sender).Text;
+            Console.WriteLine(textContainPhongThiName);
+            
+            PhongThiDTO selectedPhongThi = null;
+            foreach(var phongThi in controller.kyThiDTO.phongThiList)
+            {
+                if (textContainPhongThiName.Contains(phongThi.phong.ToString()))
+                {
+                    selectedPhongThi = phongThi;
+                    break;
+                }
+            }
 
+            if (selectedPhongThi != null)
+            {
+                SelectedRoom selectedRoom = new SelectedRoom(selectedPhongThi, controller.sbdExcelPath);
+                selectedRoom.Show();
+            }
+            
 
         }
 

@@ -12,6 +12,7 @@ namespace FaceRecognitionApp.DTO
         string sbd { get; set; }
         string hoten { get; set; }
         string ngaysinh { get; set; }
+        bool checkin { get; set;}
 
         /// <summary>
         /// create new sinh vien object

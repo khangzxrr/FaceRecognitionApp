@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.phongLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // phongLabel
+            // 
+            this.phongLabel.AutoSize = true;
+            this.phongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phongLabel.Location = new System.Drawing.Point(12, 9);
+            this.phongLabel.Name = "phongLabel";
+            this.phongLabel.Size = new System.Drawing.Size(113, 29);
+            this.phongLabel.TabIndex = 0;
+            this.phongLabel.Text = "Phòng ....";
+            // 
+            // SelectedRoom
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(890, 523);
+            this.Controls.Add(this.phongLabel);
+            this.Name = "SelectedRoom";
             this.Text = "SelectedRoom";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label phongLabel;
     }
 }

@@ -72,10 +72,10 @@
   <ItemGroup>
     <Compile Include="Controller.cs" />
     <Compile Include="DAO\KyThiDAO.cs" />
-    <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DTO\KyThiDTO.cs" />
     <Compile Include="DTO\PhongThiDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
+    <Compile Include="DAO\SoBaoDanhDAO.cs" />
     <Compile Include="RoomPickerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +100,9 @@
     <Compile Include="Util\ExcelUltil.cs" />
     <EmbeddedResource Include="RoomPickerForm.resx">
       <DependentUpon>RoomPickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectedRoom.resx">
+      <DependentUpon>SelectedRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FaceRecognitionApp.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace FaceRecognitionApp
 {
     public partial class SelectedRoom : Form
     {
-        public SelectedRoom()
+
+        public SelectedRoom(PhongThiDTO phongThi, string excelPath)
         {
             InitializeComponent();
+            SoBaoDanhDTO.GenerateTable(this, excelPath, phongThi);
+
         }
     }
 }
