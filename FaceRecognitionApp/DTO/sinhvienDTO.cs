@@ -8,17 +8,29 @@ namespace FaceRecognitionApp.DTO
 {
     public class SinhVienDTO
     {
-        string mssv { get; set; }
-        string hovatendem { get; set; }
-        string ten { get; set; }
-        bool trained = false;
+        double stt { get; set; }
+        string sbd { get; set; }
+        string hoten { get; set; }
+        string ngaysinh { get; set; }
 
-        public SinhVienDTO(string mssv, string hovatendem, string ten, bool trained)
+        /// <summary>
+        /// create new sinh vien object
+        /// </summary>
+        /// <param name="stt"></param>
+        /// <param name="sbd"></param>
+        /// <param name="ten"></param>
+        /// <param name="ngaysinh"></param>
+        public SinhVienDTO(double stt, string sbd, string hoten, string ngaysinh)
         {
-            this.mssv = mssv;
-            this.hovatendem = hovatendem;
-            this.ten = ten;
-            this.trained = trained;
+            this.stt = stt;
+            this.sbd = sbd;
+            this.hoten = hoten;
+            this.ngaysinh = ngaysinh;
+        }
+
+        public override string ToString()
+        {
+            return $"{stt} {sbd} {hoten} {ngaysinh}";
         }
     }
 }

@@ -10,9 +10,8 @@ namespace FaceRecognitionApp.DTO
     {
         public string ten { get; set; }
         public DateTime khoaNgay { get; set; }
-        public List<MonThiDTO> monThis { get; set; }
+        public List<PhongThiDTO> phongThiList { get; set; }
         public bool buoi { get; set; }
-        public int tongsophong { get; set; }
 
         /// <summary>
         /// create new ky thi which monThis will be set later, buoi thi [true is Sang, false is toi]
@@ -20,13 +19,12 @@ namespace FaceRecognitionApp.DTO
         /// <param name="ten"></param>
         /// <param name="khoaNgay"></param>
         /// <param name="buoi"></param> 
-        /// <param name="tongsophong"></param>
-        public KyThiDTO(string ten, DateTime khoaNgay, bool buoi, int tongsophong)
+        public KyThiDTO(string ten, DateTime khoaNgay, bool buoi)
         {
             this.ten = ten;
             this.khoaNgay = khoaNgay;
             this.buoi = buoi;
-            this.tongsophong = tongsophong;
+            phongThiList = new List<PhongThiDTO>();
         }
     }
 }

@@ -10,11 +10,5 @@ namespace FaceRecognitionApp.DAO
 {
     class SinhVienDAO
     {
-        public SinhVienDTO CreateNewSinhvien(string mssv, string hovatendem, string ten, bool trained)
-        {
-            return new SinhVienDTO(mssv, hovatendem, ten, trained);
-        }
-
-        
     }
 }

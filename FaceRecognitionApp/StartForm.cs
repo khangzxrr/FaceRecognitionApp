@@ -22,17 +22,50 @@ namespace FaceRecognitionApp
             controller = new Controller();
         }
 
+        /// <summary>
+        /// load mon thi, sinh vien, ten ky thi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nhapdanhsachBtn_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "excel file (*.xlsx)|*.xlsx";
+                openFileDialog.Filter = "excel file (*.*)|*.*";
                 openFileDialog.RestoreDirectory = true;
 
                 if(openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     var filePath = openFileDialog.FileName;
-                    controller.ReadDataFromFile(filePath);
+                    int monThiCount = controller.ImportDSDT(filePath);
+
+                    //get ky thi name from excel file
+                    kythiField.Text = controller.GetKyThiName(filePath);
+
+                    //clear all mon thi items before continue
+                    monThiComboBox.Items.Clear();
+                    
+                    //loop every phong thi
+                    foreach(var phongThi in controller.phongThiDTO)
+                    {
+                        bool exist = false; //mon thi isnt exist
+
+                        //loop to find if mon thi is exist in combo box
+                        foreach(PhongThiDTO phongThiInComboBox in monThiComboBox.Items) 
+                        {
+                            if (phongThiInComboBox.tenMon.ToLower()  == phongThi.tenMon.ToLower())
+                            {
+                                exist = true;
+                                break;
+                            }
+                        }
+
+                        if (!exist) monThiComboBox.Items.Add(phongThi);
+                    }
+
+                    sophongField.Text = controller.phongThiDTO.Count.ToString();
+
+                    importDSTSStatus.Text = $"Đã load tất cả sinh viên và {monThiCount} môn thi";
                 }
             }
         }
@@ -41,10 +74,29 @@ namespace FaceRecognitionApp
         {
             bool sang = sangRadio.Checked ? true : false;
 
-            controller.CreateNewKyThi(kythiField.Text, khoangayField.Value, sang, int.Parse(sophongField.Text));
+            controller.CreateNewKyThi(kythiField.Text, khoangayField.Value, sang, monThiComboBox.SelectedItem.ToString());
 
-            RoomPickerForm roomPickerForm = new RoomPickerForm(controller.kyThiDTO);
+            //////// TODO: add mon to ky thi
+
+            RoomPickerForm roomPickerForm = new RoomPickerForm(controller);
             roomPickerForm.Show();
         }
+
+        private void sbdButton_clicked(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "excel file (*.*)|*.*";
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    controller.sbdExcelPath = openFileDialog.FileName;
+                }
+            }
+
+            MessageBox.Show("Success loaded SBD excel file");
+        }
+
     }
 }

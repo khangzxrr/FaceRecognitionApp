@@ -81,7 +81,7 @@
     <Compile Include="DAO\KyThiDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DTO\KyThiDTO.cs" />
-    <Compile Include="DTO\MonThiDTO.cs" />
+    <Compile Include="DTO\PhongThiDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
     <Compile Include="RoomPickerForm.cs">
       <SubType>Form</SubType>
@@ -98,6 +98,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAO\RecognierDAO.cs" />
+    <Compile Include="Util\ExcelUltil.cs" />
     <EmbeddedResource Include="RoomPickerForm.resx">
       <DependentUpon>RoomPickerForm.cs</DependentUpon>
     </EmbeddedResource>

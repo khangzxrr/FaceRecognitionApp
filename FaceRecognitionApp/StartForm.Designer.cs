@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.khoangayField = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.monthiField = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nhapdanhsachBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
@@ -42,6 +41,9 @@
             this.chieuRadio = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.sophongField = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.importDSTSStatus = new System.Windows.Forms.Label();
+            this.monThiComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // kythiField
@@ -101,14 +103,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Môn Thi";
             // 
-            // monthiField
-            // 
-            this.monthiField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthiField.Location = new System.Drawing.Point(221, 202);
-            this.monthiField.Name = "monthiField";
-            this.monthiField.Size = new System.Drawing.Size(411, 34);
-            this.monthiField.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -122,9 +116,9 @@
             // nhapdanhsachBtn
             // 
             this.nhapdanhsachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhapdanhsachBtn.Location = new System.Drawing.Point(224, 352);
+            this.nhapdanhsachBtn.Location = new System.Drawing.Point(21, 348);
             this.nhapdanhsachBtn.Name = "nhapdanhsachBtn";
-            this.nhapdanhsachBtn.Size = new System.Drawing.Size(411, 43);
+            this.nhapdanhsachBtn.Size = new System.Drawing.Size(346, 43);
             this.nhapdanhsachBtn.TabIndex = 13;
             this.nhapdanhsachBtn.Text = "Nhập danh sách thí sinh";
             this.nhapdanhsachBtn.UseVisualStyleBackColor = true;
@@ -133,7 +127,7 @@
             // nextBtn
             // 
             this.nextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(503, 415);
+            this.nextBtn.Location = new System.Drawing.Point(500, 434);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(132, 36);
             this.nextBtn.TabIndex = 14;
@@ -183,11 +177,43 @@
             this.sophongField.Size = new System.Drawing.Size(411, 34);
             this.sophongField.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(373, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(346, 43);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Nhập số báo danh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.sbdButton_clicked);
+            // 
+            // importDSTSStatus
+            // 
+            this.importDSTSStatus.AutoSize = true;
+            this.importDSTSStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importDSTSStatus.Location = new System.Drawing.Point(16, 394);
+            this.importDSTSStatus.Name = "importDSTSStatus";
+            this.importDSTSStatus.Size = new System.Drawing.Size(0, 25);
+            this.importDSTSStatus.TabIndex = 20;
+            // 
+            // monThiComboBox
+            // 
+            this.monThiComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monThiComboBox.FormattingEnabled = true;
+            this.monThiComboBox.Location = new System.Drawing.Point(221, 202);
+            this.monThiComboBox.Name = "monThiComboBox";
+            this.monThiComboBox.Size = new System.Drawing.Size(410, 37);
+            this.monThiComboBox.TabIndex = 21;
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 482);
+            this.Controls.Add(this.monThiComboBox);
+            this.Controls.Add(this.importDSTSStatus);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.sophongField);
             this.Controls.Add(this.chieuRadio);
@@ -196,7 +222,6 @@
             this.Controls.Add(this.nhapdanhsachBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.monthiField);
             this.Controls.Add(this.khoangayField);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -217,7 +242,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker khoangayField;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox monthiField;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button nhapdanhsachBtn;
         private System.Windows.Forms.Button nextBtn;
@@ -225,6 +249,9 @@
         private System.Windows.Forms.RadioButton chieuRadio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox sophongField;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label importDSTSStatus;
+        private System.Windows.Forms.ComboBox monThiComboBox;
     }
 }
 

@@ -13,14 +13,16 @@ namespace FaceRecognitionApp
 {
     public partial class RoomPickerForm : Form
     {
-        public RoomPickerForm(KyThiDTO kyThi)
+        Controller controller;
+        public RoomPickerForm(Controller controller)
         {
+            this.controller = controller;
             InitializeComponent();
-            SetData(kyThi);
+            SetData(controller.kyThiDTO);
         }
 
 
-        private void GenerateRoomsBtn(int max)
+        private void GenerateRoomsBtn(List<PhongThiDTO> phongThiList)
         {
             int preX = phong1Btn.Location.X;
             int preY = phong1Btn.Location.Y;
@@ -30,7 +32,7 @@ namespace FaceRecognitionApp
             int padding = 15;
 
             int elementOnRowCount = 1;
-            for(int i = 2; i <= max; i++)
+            for(int i = 2; i <= phongThiList.Count; i++)
             {
                 
 
@@ -40,7 +42,7 @@ namespace FaceRecognitionApp
                 newRoomBtn.Height = height;
                 newRoomBtn.Font = phong1Btn.Font;
 
-                newRoomBtn.Text = $"Phòng {i}";
+                newRoomBtn.Text = $"Phòng {phongThiList[i].phong}";
 
                 this.Controls.Add(newRoomBtn);
 
@@ -65,18 +67,20 @@ namespace FaceRecognitionApp
 
         private void SetData(KyThiDTO kythi)
         {
+            
             kythiLabel.Text = $"Kỳ Thi: {kythi.ten}";
             khoangayLabel.Text = $"Khóa ngày: {kythi.khoaNgay}";
-            monthiLabel.Text = $"Môn Thi: {kythi.mon}";
+            monthiLabel.Text = $"Môn Thi: {kythi.phongThiList.First().tenMon}";
 
             string buoi = kythi.buoi ? "Sáng" : "Chiều";
             buoiThiLabel.Text = $"Buổi Thi: {buoi}";
 
-            tongphongLabel.Text = $"Tổng phòng: {kythi.tongsophong}";
+            tongphongLabel.Text = $"Tổng phòng: {kythi.phongThiList.Count}";
 
-            GenerateRoomsBtn(kythi.tongsophong);
+            GenerateRoomsBtn(kythi.phongThiList);
 
             phong1Btn.MouseClick += OnRoomBtnClicked;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
