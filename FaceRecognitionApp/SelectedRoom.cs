@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Threading;
 
 namespace FaceRecognitionApp
 {
@@ -17,8 +19,18 @@ namespace FaceRecognitionApp
         public SelectedRoom(PhongThiDTO phongThi, string excelPath)
         {
             InitializeComponent();
-            SoBaoDanhDTO.GenerateTable(this, excelPath, phongThi);
 
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            phongLabel.Text = $"Phòng {phongThi.phong}";
+            SoBaoDanhDTO.GenerateSBDTable(this, excelPath, phongThi);
+
+
+            
+            
         }
+
+        
     }
 }

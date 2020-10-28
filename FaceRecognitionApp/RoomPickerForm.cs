@@ -24,18 +24,19 @@ namespace FaceRecognitionApp
 
         private void GenerateRoomsBtn(List<PhongThiDTO> phongThiList)
         {
-            int preX = phong1Btn.Location.X;
-            int preY = phong1Btn.Location.Y;
             int width = phong1Btn.Width;
             int height = phong1Btn.Height;
 
             int padding = 15;
 
+            int preX = phong1Btn.Location.X - width - padding;
+            int preY = phong1Btn.Location.Y;
+
             int elementOnRowCount = 1;
 
             phong1Btn.Text = $"Phòng {phongThiList[0].phong}";
 
-            for (int i = 2; i <= phongThiList.Count; i++)
+            for (int i = 0; i < phongThiList.Count; i++)
             {
                 
 

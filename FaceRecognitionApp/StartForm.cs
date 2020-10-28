@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace FaceRecognitionApp
         Controller controller;
         public StartForm()
         {
+
             InitializeComponent();
             controller = new Controller();
         }

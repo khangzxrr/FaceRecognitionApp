@@ -15,8 +15,8 @@ namespace FaceRecognitionApp.DAO
 
         public string GetKyThiName(string excelPath)
         {
-            var excelApp = new Excel.Application();
-            var excelWorkBook = excelApp.Workbooks.Open(excelPath);
+            
+            var excelWorkBook = ExcelUltil.excelApp.Workbooks.Open(excelPath);
             var excelWorkSheet = (Excel.Worksheet)excelWorkBook.Worksheets.get_Item(1);
 
             var range = excelWorkSheet.UsedRange;
@@ -42,7 +42,6 @@ namespace FaceRecognitionApp.DAO
 
 
             excelWorkBook.Close();
-            excelApp.Quit();
 
             return null;
         }
@@ -54,8 +53,7 @@ namespace FaceRecognitionApp.DAO
         /// <returns></returns>
         public List<PhongThiDTO> readMonThiAndSinhviens(string excelPath)
         {
-            var excelApp = new Excel.Application();
-            var excelWorkBook = excelApp.Workbooks.Open(excelPath);
+            var excelWorkBook = ExcelUltil.excelApp.Workbooks.Open(excelPath);
             var excelWorkSheet = (Excel.Worksheet)excelWorkBook.Worksheets.get_Item(1);
 
             var range = excelWorkSheet.UsedRange;
@@ -127,8 +125,7 @@ namespace FaceRecognitionApp.DAO
 
 
             excelWorkBook.Close();
-            excelApp.Quit();
-
+            
             return monThiList;
         }
 

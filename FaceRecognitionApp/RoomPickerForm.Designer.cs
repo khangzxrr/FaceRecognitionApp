@@ -53,12 +53,13 @@
             // phong1Btn
             // 
             this.phong1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phong1Btn.Location = new System.Drawing.Point(37, 235);
+            this.phong1Btn.Location = new System.Drawing.Point(35, 235);
             this.phong1Btn.Name = "phong1Btn";
             this.phong1Btn.Size = new System.Drawing.Size(202, 38);
             this.phong1Btn.TabIndex = 4;
             this.phong1Btn.Text = "Phòng 1";
             this.phong1Btn.UseVisualStyleBackColor = true;
+            this.phong1Btn.Visible = false;
             // 
             // kythiLabel
             // 
