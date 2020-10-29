@@ -123,7 +123,6 @@ namespace FaceRecognitionApp.DAO
 
             }
 
-
             excelWorkBook.Close();
             
             return monThiList;

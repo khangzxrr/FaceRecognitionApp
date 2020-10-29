@@ -73,29 +73,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CamerasDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamerasDisplay.Designer.cs">
+      <DependentUpon>CamerasDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DAO\KyThiDAO.cs" />
     <Compile Include="DTO\KyThiDTO.cs" />
     <Compile Include="DTO\PhongThiDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
     <Compile Include="DAO\SoBaoDanhDAO.cs" />
-    <Compile Include="RecognierForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RecognierForm.Designer.cs">
-      <DependentUpon>RecognierForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RoomPickerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RoomPickerForm.Designer.cs">
       <DependentUpon>RoomPickerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectedRoom.cs">
+    <Compile Include="AttendanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectedRoom.Designer.cs">
-      <DependentUpon>SelectedRoom.cs</DependentUpon>
+    <Compile Include="AttendanceForm.Designer.cs">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
@@ -107,14 +107,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAO\RecognierDAO.cs" />
     <Compile Include="Util\ExcelUltil.cs" />
-    <EmbeddedResource Include="RecognierForm.resx">
-      <DependentUpon>RecognierForm.cs</DependentUpon>
+    <EmbeddedResource Include="CamerasDisplay.resx">
+      <DependentUpon>CamerasDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomPickerForm.resx">
       <DependentUpon>RoomPickerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectedRoom.resx">
-      <DependentUpon>SelectedRoom.cs</DependentUpon>
+    <EmbeddedResource Include="AttendanceForm.resx">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
@@ -127,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -170,6 +171,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eb842df2b613484d1102.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

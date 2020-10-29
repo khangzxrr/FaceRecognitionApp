@@ -21,6 +21,19 @@ namespace FaceRecognitionApp
 
             InitializeComponent();
             controller = new Controller();
+            KillExcelApp();
+        }
+
+        /// <summary>
+        /// This method use to kill every excel processes before execute anything relate to excel
+        /// which can use to reduce unused excel hidden process after terminated this program
+        /// </summary>
+        private void KillExcelApp()
+        {
+            foreach (Process process in Process.GetProcessesByName("EXCEL"))
+            {
+                process.Kill();
+            }
         }
 
         /// <summary>

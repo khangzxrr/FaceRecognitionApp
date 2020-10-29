@@ -20,6 +20,8 @@ namespace FaceRecognitionApp
             start.FileName = @"C:\Program Files\Python36\python.exe";
             start.Arguments = string.Format("{0}", "recognizer_video.py");
             start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+
             start.RedirectStandardOutput = true;
             Process process = Process.Start(start);
             while (!process.StandardOutput.EndOfStream)
@@ -40,13 +42,20 @@ namespace FaceRecognitionApp
                             button.BeginInvoke(new Action(() =>
                             {
                                 button.BackColor = Color.Green;
+                                button.ForeColor = Color.White;
                             }));
                         }
                         else
-                            button.Text = "checked!";
+                        {
+                            button.BackColor = Color.Green;
+                            button.ForeColor = Color.White;
+                        }
+                            
                     }
                 }
             }
+
+            process.Close();
         }
     }
 }

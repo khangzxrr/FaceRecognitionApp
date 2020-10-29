@@ -1,6 +1,6 @@
 ﻿namespace FaceRecognitionApp
 {
-    partial class SelectedRoom
+    partial class AttendanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,16 @@
             this.phongLabel.TabIndex = 0;
             this.phongLabel.Text = "Phòng ....";
             // 
-            // SelectedRoom
+            // AttendentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 523);
             this.Controls.Add(this.phongLabel);
-            this.Name = "SelectedRoom";
+            this.Name = "AttendentForm";
             this.Text = "SelectedRoom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.onClosing);
+            this.Load += new System.EventHandler(this.AttendentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

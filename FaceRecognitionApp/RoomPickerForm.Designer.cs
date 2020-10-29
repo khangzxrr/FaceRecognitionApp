@@ -35,7 +35,7 @@
             this.monthiLabel = new System.Windows.Forms.Label();
             this.buoiThiLabel = new System.Windows.Forms.Label();
             this.tongphongLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.viewAllRoomsBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,13 +52,14 @@
             // 
             // phong1Btn
             // 
+            this.phong1Btn.BackColor = System.Drawing.Color.Transparent;
             this.phong1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phong1Btn.Location = new System.Drawing.Point(35, 235);
             this.phong1Btn.Name = "phong1Btn";
             this.phong1Btn.Size = new System.Drawing.Size(202, 38);
             this.phong1Btn.TabIndex = 4;
             this.phong1Btn.Text = "Phòng 1";
-            this.phong1Btn.UseVisualStyleBackColor = true;
+            this.phong1Btn.UseVisualStyleBackColor = false;
             this.phong1Btn.Visible = false;
             // 
             // kythiLabel
@@ -111,16 +112,16 @@
             this.tongphongLabel.TabIndex = 9;
             this.tongphongLabel.Text = "Tổng Số Phòng:";
             // 
-            // button1
+            // viewAllRoomsBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(878, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 84);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Xem tất cả phòng thi\r\n";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.viewAllRoomsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewAllRoomsBtn.Location = new System.Drawing.Point(878, 265);
+            this.viewAllRoomsBtn.Name = "viewAllRoomsBtn";
+            this.viewAllRoomsBtn.Size = new System.Drawing.Size(178, 84);
+            this.viewAllRoomsBtn.TabIndex = 10;
+            this.viewAllRoomsBtn.Text = "Xem tất cả phòng thi\r\n";
+            this.viewAllRoomsBtn.UseVisualStyleBackColor = true;
+            this.viewAllRoomsBtn.Click += new System.EventHandler(this.viewAllRoomsAction);
             // 
             // button2
             // 
@@ -139,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 469);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.viewAllRoomsBtn);
             this.Controls.Add(this.tongphongLabel);
             this.Controls.Add(this.buoiThiLabel);
             this.Controls.Add(this.monthiLabel);
@@ -163,7 +164,7 @@
         private System.Windows.Forms.Label monthiLabel;
         private System.Windows.Forms.Label buoiThiLabel;
         private System.Windows.Forms.Label tongphongLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button viewAllRoomsBtn;
         private System.Windows.Forms.Button button2;
     }
 }

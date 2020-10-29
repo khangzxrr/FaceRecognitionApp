@@ -81,7 +81,7 @@ namespace FaceRecognitionApp
 
             if (selectedPhongThi != null)
             {
-                SelectedRoom selectedRoom = new SelectedRoom(selectedPhongThi, controller.sbdExcelPath);
+                AttendanceForm selectedRoom = new AttendanceForm(selectedPhongThi, controller.sbdExcelPath);
                 selectedRoom.Show();
             }
             
@@ -106,9 +106,10 @@ namespace FaceRecognitionApp
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void viewAllRoomsAction(object sender, EventArgs e)
         {
-
+            CamerasDisplay display = new CamerasDisplay();
+            display.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

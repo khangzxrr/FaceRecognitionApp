@@ -19,7 +19,7 @@ namespace FaceRecognitionApp.DTO
 
 
 
-        static String[,] GenerateSBDArray(string sbdExcelPath, PhongThiDTO phongThi, out int width, out int height)
+        public String[,] GenerateSBDArray(string sbdExcelPath, PhongThiDTO phongThi, out int width, out int height)
         {
             
             var excelWorkBook = ExcelUltil.excelApp.Workbooks.Open(sbdExcelPath);
@@ -83,7 +83,7 @@ namespace FaceRecognitionApp.DTO
 
         
 
-        internal static void GenerateSBDTable(SelectedRoom selectedRoom, string sbdExcelPath, PhongThiDTO phongThi)
+        public Dictionary<string, System.Windows.Forms.Button> GenerateSBDTable(AttendanceForm selectedRoom, string sbdExcelPath, PhongThiDTO phongThi)
         {
 
             int width, height;
@@ -99,7 +99,7 @@ namespace FaceRecognitionApp.DTO
                 }
             }
 
-            Dictionary<string, System.Windows.Forms.Button> sbdButton = new Dictionary<string, System.Windows.Forms.Button>();
+            Dictionary<string, System.Windows.Forms.Button> sbdButtons = new Dictionary<string, System.Windows.Forms.Button>();
 
 
             int posX = 0; //pos X is column
@@ -114,11 +114,12 @@ namespace FaceRecognitionApp.DTO
                     {
                         Console.Write(sbd[currentRow, currentColumn]);
                         var formBtn = new System.Windows.Forms.Button();
+                        formBtn.Click += AttendanceButtonAction;
                         formBtn.Size = new Size(btnWidth, btnHeight);
                         formBtn.Text = sbd[currentRow, currentColumn];
                         formBtn.Location = new System.Drawing.Point(posX, posY); //x is column, y is row!!!
 
-                        sbdButton.Add(formBtn.Text, formBtn); //add to dictionary
+                        sbdButtons.Add(formBtn.Text, formBtn); //add to dictionary
 
                         selectedRoom.Controls.Add(formBtn);
                         posX += btnWidth + 15;
@@ -145,10 +146,24 @@ namespace FaceRecognitionApp.DTO
                 }
             }
 
-            selectedRoom.Size = new Size(posX, posX);
 
-            new Thread(() => RecognierDAO.Recognizing(sbdButton)).Start();
+            return sbdButtons;
+        }
 
+        private void AttendanceButtonAction(object sender, EventArgs e)
+        {
+            var button = (System.Windows.Forms.Button)sender;
+
+            if (button.BackColor == Color.Green)
+            {
+                button.BackColor = Color.Transparent;
+                button.ForeColor = Color.Black;
+            }
+            else
+            {
+                button.BackColor = Color.Green;
+                button.ForeColor = Color.White;
+            }
         }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FaceRecognitionApp
 {
-    public partial class RecognierForm : Form
+    public partial class CamerasDisplay : Form
     {
-        public RecognierForm()
+        public CamerasDisplay()
         {
             InitializeComponent();
-        }
-
-        private void sodosbdBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
